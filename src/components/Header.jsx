@@ -15,7 +15,7 @@ const Header = () => {
             />
           </figure>
           <p className="text-lg xs:text-xl sm:text-2xl font-serif font-bold">
-            Hotel Sarina
+            Hotel Sumon
           </p>
         </div>
       </NavLink>

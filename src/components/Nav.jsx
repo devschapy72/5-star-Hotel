@@ -41,7 +41,7 @@ const Nav = () => {
       )}
 
       <ul
-        className="lg:hidden fixed top-16 left-0 w-full h-auto py-16 px-5 bg-gray-400 flex flex-col text-base font-serif duration-300"
+        className="lg:hidden fixed top-16 left-0 w-full h-auto py-16 px-5 bg-gray-400 flex flex-col text-base font-serif duration-300 z-50"
         style={{ top: openSlider ? "64px" : "-100%" }}
       >
         <li>
