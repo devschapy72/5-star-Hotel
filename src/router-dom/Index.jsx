@@ -5,6 +5,7 @@ import About from "../components/About";
 import RoomDetails from "../page-details/RoomDetails";
 import Contact from "../components/Contact";
 import OurRooms from "../components/OurRooms";
+import Error from "../components/Error";
 
 const Index = () => {
   return (

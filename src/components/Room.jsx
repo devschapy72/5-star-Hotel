@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import FormatePrice from "./FormatePrice";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Room = ({ id, image, category, price }) => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="bg-[#607779] rounded-xl overflow-hidden shadow-xl">
+    <div
+      className="bg-[#607779] rounded-xl overflow-hidden shadow-xl"
+      data-aos="flip-up"
+      data-aos-duration="1500"
+    >
       <figure>
         <img src={image} alt={category} className="w-full h-52 object-cover" />
       </figure>

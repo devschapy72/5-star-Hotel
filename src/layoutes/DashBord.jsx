@@ -6,7 +6,7 @@ const DashBord = ({ children }) => {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="min-h-[calc(100vh - 128px)] pb-10">{children}</div>
+      <div className="min-h-[calc(100vh-128px)] pb-10">{children}</div>
       <Footer />
     </div>
   );

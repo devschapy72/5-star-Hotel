@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
-      <h2 className="my-4 xs:my-6 sm:my-10 text-2xl xs:text-3xl lg:text-4xl font-serif font-bold text-center">
+      <h2
+        className="my-4 xs:my-6 sm:my-10 text-2xl xs:text-3xl lg:text-4xl font-serif font-bold text-center"
+        data-aos="fade-right"
+        data-aos-duration="1400"
+      >
         CONTACT
       </h2>
       <div className="w-full h-auto bg-gray-100 py-4 mb-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-9 w-11/12 mx-auto ">
-          <div>
+          <div data-aos="fade-up" data-aos-duration="1300">
             <figure className="w-full h-full">
               <img
                 src="https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=9QtwJC2boq3GFHaeDsKytF4-CavYKQuy1jBD2IRfYKc="
@@ -18,7 +27,11 @@ const Contact = () => {
             </figure>
           </div>
           <form action="">
-            <div className="block xs:flex gap-3 mb-4">
+            <div
+              className="block xs:flex gap-3 mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
               <input
                 type="text"
                 name="text"
@@ -40,6 +53,8 @@ const Contact = () => {
               autoComplete="off"
               placeholder="phone number"
               className="w-full h-10 pl-5 text-sm capitalize border-2 mb-4 outline-none"
+              data-aos="fade-up"
+              data-aos-duration="1300"
             />
             <textarea
               name="message"
@@ -48,6 +63,8 @@ const Contact = () => {
               rows="10"
               placeholder="message"
               className="w-full resize-none mb-7 outline-none p-5 text-base font-serif"
+              data-aos="fade-up"
+              data-aos-duration="1400"
             />
             <div className="bg-orange-500 text-white text-center py-3 font-serif text-base hover:bg-orange-600 duration-300 cursor-pointer">
               <input type="submit" value="Submit" />
