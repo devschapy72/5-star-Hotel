@@ -25,6 +25,19 @@ const RoomReducer = (state, action) => {
         isError: true,
       };
 
+    // SORT_FILE_SET_GRIDVIEW_&_SET_LIST_VIEW
+    case "SET_GRID_VIEW":
+      return {
+        ...state,
+        gridView: true,
+      };
+
+    case "SET_LIST_VIEW":
+      return {
+        ...state,
+        gridView: false,
+      };
+
     default:
       return state;
   }

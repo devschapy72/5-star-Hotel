@@ -20,7 +20,7 @@ const Room = ({ id, image, category, price }) => {
       <div className="text-center text-white font-mono font-semibold text-base">
         <p className="my-2">{category}</p>
         <p className="mb-2">
-          <FormatePrice price={price} />
+          Price: <FormatePrice price={price} />
         </p>
       </div>
       <NavLink to={`/roomdetails/${id}`}>

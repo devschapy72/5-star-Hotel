@@ -24,11 +24,21 @@ const RoomProvider = ({ children }) => {
     }
   };
 
+  // SORT_FILE_SET_GRIDVIEW_&_SET_LIST_VIEW
+  const setGridView = () => {
+    dispatch({ type: "SET_GRID_VIEW" });
+  };
+  const setListView = () => {
+    dispatch({ type: "SET_LIST_VIEW" });
+  };
+
   useEffect(() => {
     getProduct(RoomsApi);
   }, []);
   return (
-    <RoomContext.Provider value={{ ...state }}>{children}</RoomContext.Provider>
+    <RoomContext.Provider value={{ ...state, setGridView, setListView }}>
+      {children}
+    </RoomContext.Provider>
   );
 };
 

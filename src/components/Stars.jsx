@@ -17,9 +17,9 @@ const Stars = ({ reating }) => {
     );
   });
   return (
-    <div className="flex items-center gap-2 text-lg font-serif font-semibold">
+    <div className="flex items-center gap-2 text-sm sm:text-lg font-serif font-semibold">
       Reating :
-      <span className="flex items-center gap-1 text-[#fe8230] text-base">
+      <span className="flex items-center gap-1 text-[#fe8230] text-[13px] sm:text-base">
         {reatingStar}
       </span>
     </div>
