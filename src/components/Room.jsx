@@ -10,21 +10,21 @@ const Room = ({ id, image, category, price }) => {
   }, []);
   return (
     <div
-      className="bg-[#607779] rounded-xl overflow-hidden shadow-xl"
+      className="bg-gray-50 rounded-xl overflow-hidden shadow-xl"
       data-aos="flip-up"
       data-aos-duration="1500"
     >
       <figure>
         <img src={image} alt={category} className="w-full h-52 object-cover" />
       </figure>
-      <div className="text-center text-white font-mono font-semibold text-base">
+      <div className="text-center font-mono font-semibold text-base">
         <p className="my-2">{category}</p>
         <p className="mb-2">
           Price: <FormatePrice price={price} />
         </p>
       </div>
       <NavLink to={`/roomdetails/${id}`}>
-        <button className="bg-[#5b8f93] hover:bg-[#74abb0] duration-300 w-full py-3 text-white font-serif text-base font-semibold">
+        <button className="bg-orange-800 text-white  hover:bg-orange-700 duration-300 w-full py-3 font-serif text-base font-semibold">
           View Details
         </button>
       </NavLink>

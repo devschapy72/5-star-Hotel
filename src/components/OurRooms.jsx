@@ -10,7 +10,7 @@ const OurRooms = () => {
     Aos.init();
   }, []);
   return (
-    <div className="w-10/12 mx-auto">
+    <div className="w-10/12 xs:w-11/12 xl:w-10/12 mx-auto">
       <h2
         className="text-center my-5 text-4xl font-serif font-semibold"
         data-aos="fade-right"
@@ -18,17 +18,13 @@ const OurRooms = () => {
       >
         BOOKING ROOM
       </h2>
+
       <div>
         <div>
-          <FilterSection />
+          <Sort />
         </div>
         <div>
-          <div>
-            <Sort />
-          </div>
-          <div>
-            <RoomList />
-          </div>
+          <RoomList />
         </div>
       </div>
     </div>

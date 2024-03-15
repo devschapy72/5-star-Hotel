@@ -6,23 +6,41 @@ import { FaThList } from "react-icons/fa";
 import { useRoomContext } from "../context/RoomContext";
 
 const Sort = () => {
-  const { girdView, setGridView, setListView, roome } = useRoomContext();
+  const { gridView, setGridView, setListView, roome } = useRoomContext();
   return (
-    <div className="flex justify-between items-center my-4">
-      <div className=" flex gap-2 text-xl">
-        <button onClick={setGridView}>
-          {girdView ? <IoGridOutline /> : <IoGrid />}
+    <div className="flex flex-wrap gap-3 justify-between items-center my-4 border-[2px] py-4 px-3 rounded-lg">
+      <div className=" flex gap-2 text-lg sm:text-xl">
+        <button
+          onClick={setGridView}
+          className={
+            gridView
+              ? "shadow-lg px-4 py-1.5 cursor-pointer bg-gray-200"
+              : "shadow-lg px-4 py-1.5 cursor-pointer"
+          }
+        >
+          {gridView ? <IoGrid /> : <IoGridOutline />}
         </button>
-        <button onClick={setListView}>
+        <button
+          onClick={setListView}
+          className={
+            gridView
+              ? "shadow-lg px-4 py-1.5 cursor-pointer"
+              : "shadow-lg px-4 py-1.5 cursor-pointer  bg-gray-200"
+          }
+        >
           {" "}
-          {girdView ? <FaThList /> : <TfiViewListAlt />}
+          {gridView ? <TfiViewListAlt /> : <FaThList />}
         </button>
       </div>
-      <div className="">
-        <p>TOTAL ROOM {roome.length}</p>
+      <div className="w-10/12 xs:w-8/12 sm:w-6/12">
+        <input
+          type="text"
+          placeholder="Sarch room"
+          className="outline-none w-full bg-gray-100 shadow-xl px-4 py-2 rounded-full placeholder:font-serif placeholder:text-gray-600"
+        />
       </div>
-      <div className="">
-        <p>sorting</p>
+      <div className="px-6 py-1.5 shadow-xl text-lg sm:text-xl font-serif bg-gray-50">
+        <p>TOTAL ROOM {roome.length}</p>
       </div>
     </div>
   );
