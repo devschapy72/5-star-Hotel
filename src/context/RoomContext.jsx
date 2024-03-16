@@ -9,6 +9,9 @@ const initialState = {
   isLoading: "",
   isError: "",
   gridView: true,
+  filters: {
+    text: "",
+  },
 };
 
 const RoomProvider = ({ children }) => {
@@ -32,11 +35,26 @@ const RoomProvider = ({ children }) => {
     dispatch({ type: "SET_LIST_VIEW" });
   };
 
+  // SEARCH_ROOM_SORT_FILE
+  const searchRoom = (event) => {
+    let name = event.target.name;
+    let value = event.target.value;
+
+    return dispatch({ type: "SEARCH_ROOM", payload: { name, value } });
+  };
+
+  useEffect(() => {
+    dispatch({ type: "FILTER_ROOM" });
+  }, [state.filters]);
+
   useEffect(() => {
     getProduct(RoomsApi);
   }, []);
+
   return (
-    <RoomContext.Provider value={{ ...state, setGridView, setListView }}>
+    <RoomContext.Provider
+      value={{ ...state, setGridView, setListView, searchRoom }}
+    >
       {children}
     </RoomContext.Provider>
   );

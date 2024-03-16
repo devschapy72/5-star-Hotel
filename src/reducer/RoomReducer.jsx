@@ -38,6 +38,35 @@ const RoomReducer = (state, action) => {
         gridView: false,
       };
 
+    // SORT_FILE_SEARCH_ROOM
+    case "SEARCH_ROOM":
+      let { name, value } = action.payload;
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          [name]: value,
+        },
+      };
+
+    case "FILTER_ROOM":
+      let { roome } = state;
+      let updateRoomSearch = [...roome];
+
+      const { text } = state.filters;
+
+      if (text) {
+        updateRoomSearch = updateRoomSearch.filter((roomItem) => {
+          return (
+            roomItem.category && roomItem.category.toLowerCase().includes(text)
+          );
+        });
+      }
+      return {
+        ...state,
+        roome: updateRoomSearch,
+      };
+
     default:
       return state;
   }
