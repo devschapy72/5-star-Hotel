@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useRoomContext } from "../context/RoomContext";
 import Stars from "../components/Stars";
 import FormatePrice from "../components/FormatePrice";
+import DatePicker from "../components/DatePicker";
 
 const RoomDetails = () => {
   const params = useParams().id;
@@ -25,39 +26,46 @@ const RoomDetails = () => {
 
   return (
     <div className="w-11/12 sm:w-10/12 lg:w-6/12 mx-auto pt-16">
-      <h2 className="mb-10 text-center text-2xl xs:text-3xl  lg:text-4xl font-serif font-semibold uppercase text-orange-500">
+      <h2 className="mb-3 sm:mb-6 lg:mb-10 text-center text-2xl xs:text-3xl  lg:text-4xl font-serif font-semibold uppercase text-orange-500">
         {category}
       </h2>
-      <div className="flex justify-center mb-14">
+      <div className="flex justify-center mb-5 sm:mb-8 lg:mb-14">
         <figure>
-          <img src={image} alt={category} className="w-full h-56" />
+          <img
+            src={image}
+            alt={category}
+            loading="lazy"
+            className="w-full h-56"
+          />
         </figure>
       </div>
       <div>
-        <p className="text-[12px] sm:text-base">
+        <div className="text-[12px] sm:text-base">
           <span className="text-sm sm:text-lg font-serif font-semibold">
-            Category :
+            Room :
           </span>{" "}
           {category}
-        </p>
-        <p className="text-base my-3">
+        </div>
+        <span className="text-base my-3">
           <Stars reating={reating} />
-        </p>
-        <p className="text-[12px] sm:text-base">
+        </span>
+        <div className="text-[12px] sm:text-base">
           {" "}
           <span className="text-sm sm:text-lg font-serif font-semibold">
             Price :{" "}
           </span>
           <FormatePrice price={price} />
-        </p>
+        </div>
         <hr className="my-3" />
-        <p className="text-[12px] sm:text-base">
+        <div className="text-[12px] sm:text-base">
           <span className="text-sm sm:text-lg font-serif font-semibold">
             Description :{" "}
           </span>{" "}
           {description}
-        </p>
+        </div>
         <hr className="my-3" />
+
+        <DatePicker updateRoome={updateRoome} />
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ const Header = () => {
             <img
               src="https://media.istockphoto.com/id/487042276/photo/hotel-sign.webp?b=1&s=170667a&w=0&k=20&c=TpjhgbKLnlKzHNBtM-2A3fn3KG37e8tTGKPPWZJR5g4="
               alt="hotel logo"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </figure>

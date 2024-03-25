@@ -30,6 +30,7 @@ const HotelServices = () => {
                 <img
                   src={image}
                   alt={category}
+                  loading="lazy"
                   className="w-full h-32 xs:h-52 object-cover"
                 />
               </figure>

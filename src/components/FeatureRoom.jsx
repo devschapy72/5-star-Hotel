@@ -21,6 +21,7 @@ const FeatureRoom = () => {
           <img
             src="https://www.japantimes.co.jp/japantimes/uploads/images/2024/03/01/283559.jpg"
             alt="feature room"
+            loading="lazy"
           />
         </figure>
         <p

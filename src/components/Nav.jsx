@@ -13,18 +13,38 @@ const Nav = () => {
   };
   return (
     <nav className="relative">
-      <ul className="hidden lg:flex items-center gap-8 text-sm">
+      <ul className="hidden lg:flex items-center gap-8 font-mono text-base">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink
+            to="/"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink
+            to="/about"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/ourrooms">Our Rooms</NavLink>
+          <NavLink
+            to="/ourrooms"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            Our Rooms
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink
+            to="/contact"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
 
@@ -44,20 +64,40 @@ const Nav = () => {
         className="lg:hidden fixed top-16 left-0 w-full h-auto py-16 px-5 bg-gray-400 flex flex-col text-base font-serif duration-300 z-50"
         style={{ top: openSlider ? "64px" : "-100%" }}
       >
-        <li>
-          <NavLink to="/">Home</NavLink>
+        <li onClick={closeNav}>
+          <NavLink
+            to="/"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            Home
+          </NavLink>
         </li>
         <hr className="my-2" />
-        <li>
-          <NavLink to="/about">About</NavLink>
+        <li onClick={closeNav}>
+          <NavLink
+            to="/about"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            About
+          </NavLink>
         </li>
         <hr className="my-2" />
-        <li>
-          <NavLink to="/ourrooms">Our Rooms</NavLink>
+        <li onClick={closeNav}>
+          <NavLink
+            to="/ourrooms"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            Our Rooms
+          </NavLink>
         </li>
         <hr className="my-2" />
-        <li>
-          <NavLink to="/contact">Contact</NavLink>
+        <li onClick={closeNav}>
+          <NavLink
+            to="/contact"
+            className="active-nav hover:text-orange-600 hover:underline"
+          >
+            Contact
+          </NavLink>
         </li>
         <hr className="my-2" />
       </ul>

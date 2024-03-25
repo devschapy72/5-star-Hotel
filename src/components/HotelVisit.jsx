@@ -34,6 +34,7 @@ const HotelVisit = () => {
           <img
             src="https://media.istockphoto.com/id/1439956685/photo/hotel-guests-checking-in.jpg?s=612x612&w=0&k=20&c=28L9XwKoOvpsy_qdylXDTzENVIslPRVll8hhhMwCnrY="
             alt="hotel visit"
+            loading="lazy"
           />
         </figure>
       </div>

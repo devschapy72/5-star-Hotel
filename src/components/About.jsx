@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation, Autoplay } from "swiper/modules";
+import VipRooms from "../vip_rooms/VipRooms";
 
 const About = () => {
   return (
@@ -34,7 +35,8 @@ const About = () => {
                   <figure className="w-full h-full">
                     <img
                       src={image}
-                      alt=""
+                      alt={titel}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   </figure>
@@ -61,6 +63,9 @@ const About = () => {
 
       {/* HOTEL_SERVICES */}
       <HotelServices />
+
+      {/* VIP_ROOMS */}
+      <VipRooms />
     </>
   );
 };

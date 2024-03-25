@@ -23,6 +23,7 @@ const ListView = ({ rooms }) => {
               <img
                 src={image}
                 alt={category}
+                loading="lazy"
                 className="h-52 xs:h-72 w-full object-cover"
               />
             </figure>

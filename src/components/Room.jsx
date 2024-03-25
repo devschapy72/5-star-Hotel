@@ -15,7 +15,12 @@ const Room = ({ id, image, category, price }) => {
       data-aos-duration="1500"
     >
       <figure>
-        <img src={image} alt={category} className="w-full h-52 object-cover" />
+        <img
+          src={image}
+          alt={category}
+          loading="lazy"
+          className="w-full h-52 object-cover"
+        />
       </figure>
       <div className="text-center font-mono font-semibold text-base">
         <p className="my-2">{category}</p>
